@@ -15,3 +15,19 @@
 } @else {
   <button (click)="isActive.set(true)">Activate</button>
 }
+
+<!-- Switch Case -->
+<br><br>
+<input [(ngModel)]="fruit">
+
+@switch(fruit()) {
+  @case("apple") {
+    <span>An apple is red</span>
+  }
+  @case("banana") {
+    <span>A banana is yellow</span>
+  }
+  @default {
+    <span>Enter fruit.</span>
+  }
+}
