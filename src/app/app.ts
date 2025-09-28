@@ -20,6 +20,7 @@ export class App {
   // Class Properties
   protected readonly title = signal('my_app');
   myClass = signal('my-class');
+  tableClass = signal('table-class');
   myClasses = signal(['first', 'second']);
   isActive = signal(false);
   fruit = signal('');

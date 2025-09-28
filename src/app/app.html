@@ -42,7 +42,7 @@
 <button (click)="isActive.set(true)" *ngIf="!isActive()">Activate</button>
 
 <!-- Table -->
-<table>
+<table [ngClass]="tableClass()">
   <thead>
     <th>Subject ID</th>
     <th>Subject Code</th>
