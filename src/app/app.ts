@@ -13,6 +13,7 @@ export class App {
   protected readonly title = signal('my_app');
   myClass = signal('my-class');
   myClasses = signal(['first', 'second']);
-  isActive = signal(true);
+  isActive = signal(false);
   fruit = signal('');
+  val = signal('')
 }

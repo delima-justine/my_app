@@ -31,3 +31,11 @@
     <span>Enter fruit.</span>
   }
 }
+
+<!-- 
+  *ngIf - structural directives - laging gumamit ng () kasi gumagamit ng 
+  signal() sa TS file.
+-->
+<div [ngClass]="{ active: isActive() }">My Username</div>
+<button (click)="isActive.set(false)" *ngIf="isActive()">Deactivate</button>
+<button (click)="isActive.set(true)" *ngIf="!isActive()">Activate</button>
