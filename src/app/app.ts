@@ -2,8 +2,9 @@ import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
+import { SubjectDetail } from "./subject-detail/subject-detail";
 
-type Subject = {
+export type Subject = {
     id: number;
     subject_code: string;
     subject_name: string;
@@ -12,7 +13,7 @@ type Subject = {
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule, FormsModule],
+  imports: [RouterOutlet, CommonModule, FormsModule, SubjectDetail],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

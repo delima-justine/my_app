@@ -69,3 +69,13 @@
   <div *ngSwitchCase="5">Friday</div>
   <div *ngSwitchCase="6">Saturday</div>
 </div>
+
+<!-- 
+  Parent sending input to child and using *ngFor to
+  traverse through array.
+-->
+<div>
+<app-subject-detail 
+  *ngFor="let subject of subjects"
+  [subject]="subject"></app-subject-detail>
+</div>
