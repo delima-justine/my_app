@@ -9,14 +9,14 @@
 <!-- Useful for boolean: activating and deactivating class -->
 <div [ngClass]="{ active: isActive() }">My Username</div>
 
-<!-- Sets the .active class when truthy. -->
+<!-- Template Control - Sets the .active class when truthy. -->
 @if(isActive()) {
   <button (click)="isActive.set(false)">Deactivate</button>
 } @else {
   <button (click)="isActive.set(true)">Activate</button>
 }
 
-<!-- Switch Case -->
+<!-- Template Control - Switch Case -->
 <br><br>
 <input [(ngModel)]="fruit">
 
@@ -36,6 +36,36 @@
   *ngIf - structural directives - laging gumamit ng () kasi gumagamit ng 
   signal() sa TS file.
 -->
+<h3>Structural Directives</h3>
 <div [ngClass]="{ active: isActive() }">My Username</div>
 <button (click)="isActive.set(false)" *ngIf="isActive()">Deactivate</button>
 <button (click)="isActive.set(true)" *ngIf="!isActive()">Activate</button>
+
+<!-- Table -->
+<table>
+  <thead>
+    <th>Subject ID</th>
+    <th>Subject Code</th>
+    <th>Subject Name</th>
+    <th>No. of Units</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let subject of subjects">
+      <td>{{subject.id}}</td>
+      <td>{{subject.subject_code}}</td>
+      <td>{{subject.subject_name}}</td>
+      <td>{{subject.no_of_units}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Structural Switch -->
+<div [ngSwitch]="day()">
+  <div *ngSwitchCase="0">Sunday</div>
+  <div *ngSwitchCase="1">Monday</div>
+  <div *ngSwitchCase="2">Tuesday</div>
+  <div *ngSwitchCase="3">Wednesday</div>
+  <div *ngSwitchCase="4">Thursday</div>
+  <div *ngSwitchCase="5">Friday</div>
+  <div *ngSwitchCase="6">Saturday</div>
+</div>
