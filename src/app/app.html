@@ -79,3 +79,7 @@
   *ngFor="let subject of subjects"
   [subject]="subject"></app-subject-detail>
 </div>
+
+<!-- Two way data binding. -->
+<h1>Welcome {{username()}}</h1>
+<input [(ngModel)]="username">

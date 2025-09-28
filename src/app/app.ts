@@ -23,6 +23,7 @@ export class App {
   myClass = signal('my-class');
   tableClass = signal('table-class');
   myClasses = signal(['first', 'second']);
+  username = signal('Justine');
   isActive = signal(false);
   fruit = signal('');
   day = signal(2);
